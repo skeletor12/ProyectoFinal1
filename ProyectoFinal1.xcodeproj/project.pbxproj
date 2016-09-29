@@ -13,6 +13,16 @@
 		EE1776C61D9CD39F000CE436 /* ProyectoFinal1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE1776C41D9CD39F000CE436 /* ProyectoFinal1.xcdatamodeld */; };
 		EE1776C81D9CD39F000CE436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1776C71D9CD39F000CE436 /* Assets.xcassets */; };
 		EE1776CB1D9CD39F000CE436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1776C91D9CD39F000CE436 /* LaunchScreen.storyboard */; };
+		EE1776D51D9CD53F000CE436 /* QR.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1776D31D9CD53F000CE436 /* QR.png */; };
+		EE1776D61D9CD53F000CE436 /* RUTAS.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE1776D41D9CD53F000CE436 /* RUTAS.jpg */; };
+		EE1776D81D9CDC2C000CE436 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1776D71D9CDC2C000CE436 /* TableView.swift */; };
+		EE1776DA1D9CDC65000CE436 /* mapaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1776D91D9CDC65000CE436 /* mapaView.swift */; };
+		EE1776DC1D9CDC91000CE436 /* RutasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1776DB1D9CDC91000CE436 /* RutasView.swift */; };
+		EE1776E01D9CDCEC000CE436 /* codigoQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1776DF1D9CDCEC000CE436 /* codigoQRView.swift */; };
+		EE1776E21D9CDD0B000CE436 /* muestraQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1776E11D9CDD0B000CE436 /* muestraQRView.swift */; };
+		EE1776E41D9CDDB8000CE436 /* Rutas.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1776E31D9CDDB8000CE436 /* Rutas.swift */; };
+		EE1776E61D9CDDC3000CE436 /* Puntos.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1776E51D9CDDC3000CE436 /* Puntos.swift */; };
+		EE1776E81D9CDF1F000CE436 /* coloresRutas.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1776E71D9CDF1F000CE436 /* coloresRutas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,16 @@
 		EE1776C71D9CD39F000CE436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE1776CA1D9CD39F000CE436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE1776CC1D9CD39F000CE436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE1776D31D9CD53F000CE436 /* QR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QR.png; sourceTree = "<group>"; };
+		EE1776D41D9CD53F000CE436 /* RUTAS.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RUTAS.jpg; sourceTree = "<group>"; };
+		EE1776D71D9CDC2C000CE436 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		EE1776D91D9CDC65000CE436 /* mapaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapaView.swift; sourceTree = "<group>"; };
+		EE1776DB1D9CDC91000CE436 /* RutasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RutasView.swift; sourceTree = "<group>"; };
+		EE1776DF1D9CDCEC000CE436 /* codigoQRView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = codigoQRView.swift; sourceTree = "<group>"; };
+		EE1776E11D9CDD0B000CE436 /* muestraQRView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = muestraQRView.swift; sourceTree = "<group>"; };
+		EE1776E31D9CDDB8000CE436 /* Rutas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rutas.swift; sourceTree = "<group>"; };
+		EE1776E51D9CDDC3000CE436 /* Puntos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puntos.swift; sourceTree = "<group>"; };
+		EE1776E71D9CDF1F000CE436 /* coloresRutas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coloresRutas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +76,17 @@
 		EE1776BC1D9CD39F000CE436 /* ProyectoFinal1 */ = {
 			isa = PBXGroup;
 			children = (
+				EE1776D21D9CD502000CE436 /* imagenes */,
 				EE1776BD1D9CD39F000CE436 /* AppDelegate.swift */,
 				EE1776BF1D9CD39F000CE436 /* ViewController.swift */,
+				EE1776D71D9CDC2C000CE436 /* TableView.swift */,
+				EE1776DB1D9CDC91000CE436 /* RutasView.swift */,
+				EE1776D91D9CDC65000CE436 /* mapaView.swift */,
+				EE1776E11D9CDD0B000CE436 /* muestraQRView.swift */,
+				EE1776E31D9CDDB8000CE436 /* Rutas.swift */,
+				EE1776E51D9CDDC3000CE436 /* Puntos.swift */,
+				EE1776E71D9CDF1F000CE436 /* coloresRutas.swift */,
+				EE1776DF1D9CDCEC000CE436 /* codigoQRView.swift */,
 				EE1776C11D9CD39F000CE436 /* Main.storyboard */,
 				EE1776C71D9CD39F000CE436 /* Assets.xcassets */,
 				EE1776C91D9CD39F000CE436 /* LaunchScreen.storyboard */,
@@ -65,6 +94,15 @@
 				EE1776C41D9CD39F000CE436 /* ProyectoFinal1.xcdatamodeld */,
 			);
 			path = ProyectoFinal1;
+			sourceTree = "<group>";
+		};
+		EE1776D21D9CD502000CE436 /* imagenes */ = {
+			isa = PBXGroup;
+			children = (
+				EE1776D31D9CD53F000CE436 /* QR.png */,
+				EE1776D41D9CD53F000CE436 /* RUTAS.jpg */,
+			);
+			name = imagenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,9 +164,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE1776D51D9CD53F000CE436 /* QR.png in Resources */,
 				EE1776CB1D9CD39F000CE436 /* LaunchScreen.storyboard in Resources */,
 				EE1776C81D9CD39F000CE436 /* Assets.xcassets in Resources */,
 				EE1776C31D9CD39F000CE436 /* Main.storyboard in Resources */,
+				EE1776D61D9CD53F000CE436 /* RUTAS.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +179,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE1776E01D9CDCEC000CE436 /* codigoQRView.swift in Sources */,
+				EE1776DA1D9CDC65000CE436 /* mapaView.swift in Sources */,
+				EE1776E41D9CDDB8000CE436 /* Rutas.swift in Sources */,
 				EE1776C61D9CD39F000CE436 /* ProyectoFinal1.xcdatamodeld in Sources */,
+				EE1776E81D9CDF1F000CE436 /* coloresRutas.swift in Sources */,
+				EE1776D81D9CDC2C000CE436 /* TableView.swift in Sources */,
 				EE1776C01D9CD39F000CE436 /* ViewController.swift in Sources */,
+				EE1776E61D9CDDC3000CE436 /* Puntos.swift in Sources */,
+				EE1776E21D9CDD0B000CE436 /* muestraQRView.swift in Sources */,
+				EE1776DC1D9CDC91000CE436 /* RutasView.swift in Sources */,
 				EE1776BE1D9CD39F000CE436 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
