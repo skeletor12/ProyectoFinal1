@@ -290,6 +290,9 @@
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="FOTO"/>
+                                <connections>
+                                    <segue destination="SiH-tn-Ms6" kind="show" id="5D0-DC-x0o"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Z4-ti-mS2">
                                 <rect key="frame" x="237" y="620" width="98" height="30"/>
@@ -331,6 +334,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFa-F8-ZAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1835.5" y="425.5"/>
+        </scene>
+        <!--Foto View-->
+        <scene sceneID="w7Y-Df-2yE">
+            <objects>
+                <viewController id="SiH-tn-Ms6" customClass="fotoView" customModule="ProyectoFinal1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0lm-mU-xh0"/>
+                        <viewControllerLayoutGuide type="bottom" id="G1M-AD-RgS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0wJ-aq-wdS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmx-oN-lvB">
+                                <rect key="frame" x="77" y="521" width="85" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="CAMARA"/>
+                                <connections>
+                                    <action selector="camara" destination="SiH-tn-Ms6" eventType="touchUpInside" id="gaD-X0-4SS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKM-ya-XLJ">
+                                <rect key="frame" x="211" y="521" width="86" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="ALBUM"/>
+                                <connections>
+                                    <action selector="album" destination="SiH-tn-Ms6" eventType="touchUpInside" id="c8H-5n-m0l"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FUENTE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNC-aU-nep">
+                                <rect key="frame" x="150" y="487" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIK-Ve-ynb">
+                                <rect key="frame" x="140" y="584" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="GUARDAR"/>
+                                <connections>
+                                    <action selector="guardar" destination="SiH-tn-Ms6" eventType="touchUpInside" id="DXR-aD-4wH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g6I-0q-KcY">
+                                <rect key="frame" x="20" y="72" width="335" height="407"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="camaraboton" destination="Zmx-oN-lvB" id="raE-xA-jhf"/>
+                        <outlet property="fotoVista" destination="g6I-0q-KcY" id="mmp-AF-hXY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sit-3h-yEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2283.5" y="425.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y6z-oR-Zck">

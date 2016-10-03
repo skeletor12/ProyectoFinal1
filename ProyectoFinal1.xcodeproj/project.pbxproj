@@ -23,6 +23,7 @@
 		EE1776E41D9CDDB8000CE436 /* Rutas.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1776E31D9CDDB8000CE436 /* Rutas.swift */; };
 		EE1776E61D9CDDC3000CE436 /* Puntos.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1776E51D9CDDC3000CE436 /* Puntos.swift */; };
 		EE1776E81D9CDF1F000CE436 /* coloresRutas.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1776E71D9CDF1F000CE436 /* coloresRutas.swift */; };
+		EE7B9DEF1DA207F100E4E100 /* fotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B9DEE1DA207F100E4E100 /* fotoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		EE1776E31D9CDDB8000CE436 /* Rutas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rutas.swift; sourceTree = "<group>"; };
 		EE1776E51D9CDDC3000CE436 /* Puntos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puntos.swift; sourceTree = "<group>"; };
 		EE1776E71D9CDF1F000CE436 /* coloresRutas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coloresRutas.swift; sourceTree = "<group>"; };
+		EE7B9DEE1DA207F100E4E100 /* fotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				EE1776C91D9CD39F000CE436 /* LaunchScreen.storyboard */,
 				EE1776CC1D9CD39F000CE436 /* Info.plist */,
 				EE1776C41D9CD39F000CE436 /* ProyectoFinal1.xcdatamodeld */,
+				EE7B9DEE1DA207F100E4E100 /* fotoView.swift */,
 			);
 			path = ProyectoFinal1;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE7B9DEF1DA207F100E4E100 /* fotoView.swift in Sources */,
 				EE1776E01D9CDCEC000CE436 /* codigoQRView.swift in Sources */,
 				EE1776DA1D9CDC65000CE436 /* mapaView.swift in Sources */,
 				EE1776E41D9CDDB8000CE436 /* Rutas.swift in Sources */,
@@ -341,6 +345,7 @@
 				EE1776D11D9CD39F000CE436 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
