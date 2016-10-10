@@ -18,23 +18,13 @@ class MapasWatchInterfaceController: WKInterfaceController, CLLocationManagerDel
     let manejador = CLLocationManager()
     @IBOutlet var mapa: WKInterfaceMap!
     @IBAction func zoom(value: Float) {
-        let grados:CLLocationDegrees=CLLocationDegrees(value)/10
-        let ventana = MKCoordinateSpanMake(grados, grados)
-        let puntoCoor = CLLocationCoordinate2D(latitude: (manejador.location?.coordinate.latitude)!, longitude: (manejador.location?.coordinate.longitude)!)
-        let region = MKCoordinateRegionMake(puntoCoor, ventana)
-        self.mapa.setRegion(region)
+  
     }
     
     override func awakeWithContext(context: AnyObject?) {
         
         super.awakeWithContext(context)
-        manejador.delegate = self
-        manejador.desiredAccuracy = kCLLocationAccuracyBest
-        
-        let puntoCoor = CLLocationCoordinate2D(latitude: (manejador.location?.coordinate.latitude)!, longitude: (manejador.location?.coordinate.longitude)!)
-        let region = MKCoordinateRegion(center: puntoCoor, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
-        self.mapa.setRegion(region)
-        self.mapa.addAnnotation(puntoCoor, withPinColor: .Purple)
+       
         
         // Configure interface objects here.
     }
