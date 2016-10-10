@@ -24,7 +24,7 @@ class MapasWatchInterfaceController: WKInterfaceController, CLLocationManagerDel
     override func awakeWithContext(context: AnyObject?) {
         
         super.awakeWithContext(context)
-       
+       ///
         
         // Configure interface objects here.
     }
