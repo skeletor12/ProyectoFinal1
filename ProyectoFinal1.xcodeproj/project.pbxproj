@@ -23,7 +23,28 @@
 		EE1776E41D9CDDB8000CE436 /* Rutas.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1776E31D9CDDB8000CE436 /* Rutas.swift */; };
 		EE1776E61D9CDDC3000CE436 /* Puntos.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1776E51D9CDDC3000CE436 /* Puntos.swift */; };
 		EE1776E81D9CDF1F000CE436 /* coloresRutas.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1776E71D9CDF1F000CE436 /* coloresRutas.swift */; };
+		EE259E2F1DB89037007C1AAE /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE259E2B1DB89037007C1AAE /* DebugMapViewController.xib */; };
+		EE259E301DB89037007C1AAE /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = EE259E2C1DB89037007C1AAE /* hdar_close.png */; };
+		EE259E311DB89037007C1AAE /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE259E2D1DB89037007C1AAE /* hdar_close@2x.png */; };
+		EE259E321DB89037007C1AAE /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE259E2E1DB89037007C1AAE /* hdar_close@3x.png */; };
+		EE259E391DB89094007C1AAE /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE259E341DB89094007C1AAE /* ARAnnotation.swift */; };
+		EE259E3A1DB89094007C1AAE /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE259E351DB89094007C1AAE /* ARAnnotationView.swift */; };
+		EE259E3B1DB89094007C1AAE /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE259E361DB89094007C1AAE /* ARConfiguration.swift */; };
+		EE259E3C1DB89094007C1AAE /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE259E371DB89094007C1AAE /* ARTrackingManager.swift */; };
+		EE259E3D1DB89094007C1AAE /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE259E381DB89094007C1AAE /* ARViewController.swift */; };
+		EE259E401DB890C7007C1AAE /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE259E3F1DB890C7007C1AAE /* DebugMapViewController.swift */; };
+		EE259E431DB8912D007C1AAE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE259E421DB8912D007C1AAE /* CoreLocation.framework */; };
+		EE259E451DB89142007C1AAE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE259E441DB89142007C1AAE /* CoreMotion.framework */; };
+		EE259E471DB8914C007C1AAE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE259E461DB8914C007C1AAE /* MapKit.framework */; };
+		EE259E491DB891C8007C1AAE /* realidadAumentadaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE259E481DB891C8007C1AAE /* realidadAumentadaView.swift */; };
+		EE259E4B1DB89275007C1AAE /* TestAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE259E4A1DB89275007C1AAE /* TestAnnotationView.swift */; };
 		EE7B9DEF1DA207F100E4E100 /* fotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B9DEE1DA207F100E4E100 /* fotoView.swift */; };
+		EE90972E1DB48219009571A4 /* ACERCA.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE90972D1DB48219009571A4 /* ACERCA.jpg */; };
+		EE9097301DB48221009571A4 /* EVENTOS.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE90972F1DB48221009571A4 /* EVENTOS.jpg */; };
+		EE9097321DB482DE009571A4 /* AcercaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9097311DB482DE009571A4 /* AcercaView.swift */; };
+		EE9097341DB48315009571A4 /* EventosTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9097331DB48315009571A4 /* EventosTableView.swift */; };
+		EE9097361DB48359009571A4 /* Teatros.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9097351DB48359009571A4 /* Teatros.swift */; };
+		EE9097381DB48361009571A4 /* ConfiguracionCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9097371DB48361009571A4 /* ConfiguracionCelda.swift */; };
 		EECFFEA91DA887FB0027712D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECFFEA71DA887FB0027712D /* Interface.storyboard */; };
 		EECFFEAB1DA887FB0027712D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECFFEAA1DA887FB0027712D /* Assets.xcassets */; };
 		EECFFEB21DA887FB0027712D /* ProyectoFinal1Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EECFFEB11DA887FB0027712D /* ProyectoFinal1Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -99,7 +120,28 @@
 		EE1776E31D9CDDB8000CE436 /* Rutas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rutas.swift; sourceTree = "<group>"; };
 		EE1776E51D9CDDC3000CE436 /* Puntos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puntos.swift; sourceTree = "<group>"; };
 		EE1776E71D9CDF1F000CE436 /* coloresRutas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coloresRutas.swift; sourceTree = "<group>"; };
+		EE259E2B1DB89037007C1AAE /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
+		EE259E2C1DB89037007C1AAE /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdar_close.png; sourceTree = "<group>"; };
+		EE259E2D1DB89037007C1AAE /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
+		EE259E2E1DB89037007C1AAE /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
+		EE259E341DB89094007C1AAE /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
+		EE259E351DB89094007C1AAE /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
+		EE259E361DB89094007C1AAE /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
+		EE259E371DB89094007C1AAE /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
+		EE259E381DB89094007C1AAE /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		EE259E3F1DB890C7007C1AAE /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
+		EE259E421DB8912D007C1AAE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EE259E441DB89142007C1AAE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		EE259E461DB8914C007C1AAE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EE259E481DB891C8007C1AAE /* realidadAumentadaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = realidadAumentadaView.swift; sourceTree = "<group>"; };
+		EE259E4A1DB89275007C1AAE /* TestAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestAnnotationView.swift; path = ProyectoFinal1/TestAnnotationView.swift; sourceTree = "<group>"; };
 		EE7B9DEE1DA207F100E4E100 /* fotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fotoView.swift; sourceTree = "<group>"; };
+		EE90972D1DB48219009571A4 /* ACERCA.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ACERCA.jpg; sourceTree = "<group>"; };
+		EE90972F1DB48221009571A4 /* EVENTOS.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EVENTOS.jpg; sourceTree = "<group>"; };
+		EE9097311DB482DE009571A4 /* AcercaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcercaView.swift; sourceTree = "<group>"; };
+		EE9097331DB48315009571A4 /* EventosTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventosTableView.swift; sourceTree = "<group>"; };
+		EE9097351DB48359009571A4 /* Teatros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teatros.swift; sourceTree = "<group>"; };
+		EE9097371DB48361009571A4 /* ConfiguracionCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguracionCelda.swift; sourceTree = "<group>"; };
 		EECFFEA51DA887FA0027712D /* ProyectoFinal1Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoFinal1Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECFFEA81DA887FB0027712D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		EECFFEAA1DA887FB0027712D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +164,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE259E471DB8914C007C1AAE /* MapKit.framework in Frameworks */,
+				EE259E451DB89142007C1AAE /* CoreMotion.framework in Frameworks */,
+				EE259E431DB8912D007C1AAE /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,10 +183,12 @@
 		EE1776B11D9CD39F000CE436 = {
 			isa = PBXGroup;
 			children = (
+				EE259E4A1DB89275007C1AAE /* TestAnnotationView.swift */,
 				EE1776BC1D9CD39F000CE436 /* ProyectoFinal1 */,
 				EECFFEA61DA887FB0027712D /* ProyectoFinal1Watch */,
 				EECFFEB51DA887FB0027712D /* ProyectoFinal1Watch Extension */,
 				EE1776BB1D9CD39F000CE436 /* Products */,
+				EE259E411DB8912D007C1AAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +205,8 @@
 		EE1776BC1D9CD39F000CE436 /* ProyectoFinal1 */ = {
 			isa = PBXGroup;
 			children = (
+				EE259E331DB89046007C1AAE /* Classes */,
+				EE259E2A1DB8900E007C1AAE /* Resources */,
 				EE1776D21D9CD502000CE436 /* imagenes */,
 				EE1776BD1D9CD39F000CE436 /* AppDelegate.swift */,
 				EE1776BF1D9CD39F000CE436 /* ViewController.swift */,
@@ -170,11 +219,16 @@
 				EE1776E71D9CDF1F000CE436 /* coloresRutas.swift */,
 				EE1776DF1D9CDCEC000CE436 /* codigoQRView.swift */,
 				EE1776C11D9CD39F000CE436 /* Main.storyboard */,
+				EE9097311DB482DE009571A4 /* AcercaView.swift */,
+				EE9097331DB48315009571A4 /* EventosTableView.swift */,
+				EE9097351DB48359009571A4 /* Teatros.swift */,
+				EE9097371DB48361009571A4 /* ConfiguracionCelda.swift */,
 				EE1776C71D9CD39F000CE436 /* Assets.xcassets */,
 				EE1776C91D9CD39F000CE436 /* LaunchScreen.storyboard */,
 				EE1776CC1D9CD39F000CE436 /* Info.plist */,
 				EE1776C41D9CD39F000CE436 /* ProyectoFinal1.xcdatamodeld */,
 				EE7B9DEE1DA207F100E4E100 /* fotoView.swift */,
+				EE259E481DB891C8007C1AAE /* realidadAumentadaView.swift */,
 			);
 			path = ProyectoFinal1;
 			sourceTree = "<group>";
@@ -182,10 +236,54 @@
 		EE1776D21D9CD502000CE436 /* imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				EE90972F1DB48221009571A4 /* EVENTOS.jpg */,
+				EE90972D1DB48219009571A4 /* ACERCA.jpg */,
 				EE1776D31D9CD53F000CE436 /* QR.png */,
 				EE1776D41D9CD53F000CE436 /* RUTAS.jpg */,
 			);
 			name = imagenes;
+			sourceTree = "<group>";
+		};
+		EE259E2A1DB8900E007C1AAE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE259E2B1DB89037007C1AAE /* DebugMapViewController.xib */,
+				EE259E2C1DB89037007C1AAE /* hdar_close.png */,
+				EE259E2D1DB89037007C1AAE /* hdar_close@2x.png */,
+				EE259E2E1DB89037007C1AAE /* hdar_close@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EE259E331DB89046007C1AAE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EE259E3E1DB890B5007C1AAE /* Debug */,
+				EE259E341DB89094007C1AAE /* ARAnnotation.swift */,
+				EE259E351DB89094007C1AAE /* ARAnnotationView.swift */,
+				EE259E361DB89094007C1AAE /* ARConfiguration.swift */,
+				EE259E371DB89094007C1AAE /* ARTrackingManager.swift */,
+				EE259E381DB89094007C1AAE /* ARViewController.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		EE259E3E1DB890B5007C1AAE /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				EE259E3F1DB890C7007C1AAE /* DebugMapViewController.swift */,
+			);
+			name = Debug;
+			sourceTree = "<group>";
+		};
+		EE259E411DB8912D007C1AAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE259E461DB8914C007C1AAE /* MapKit.framework */,
+				EE259E441DB89142007C1AAE /* CoreMotion.framework */,
+				EE259E421DB8912D007C1AAE /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EECFFEA61DA887FB0027712D /* ProyectoFinal1Watch */ = {
@@ -292,14 +390,17 @@
 					EE1776B91D9CD39F000CE436 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = GBEM7P83UA;
+						LastSwiftMigration = 0800;
 					};
 					EECFFEA41DA887FA0027712D = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = GBEM7P83UA;
+						LastSwiftMigration = 0800;
 					};
 					EECFFEB01DA887FB0027712D = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = GBEM7P83UA;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -328,11 +429,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE90972E1DB48219009571A4 /* ACERCA.jpg in Resources */,
+				EE259E301DB89037007C1AAE /* hdar_close.png in Resources */,
 				EE1776D51D9CD53F000CE436 /* QR.png in Resources */,
 				EE1776CB1D9CD39F000CE436 /* LaunchScreen.storyboard in Resources */,
+				EE259E311DB89037007C1AAE /* hdar_close@2x.png in Resources */,
 				EE1776C81D9CD39F000CE436 /* Assets.xcassets in Resources */,
+				EE259E321DB89037007C1AAE /* hdar_close@3x.png in Resources */,
+				EE9097301DB48221009571A4 /* EVENTOS.jpg in Resources */,
 				EE1776C31D9CD39F000CE436 /* Main.storyboard in Resources */,
 				EE1776D61D9CD53F000CE436 /* RUTAS.jpg in Resources */,
+				EE259E2F1DB89037007C1AAE /* DebugMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,17 +467,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE259E3D1DB89094007C1AAE /* ARViewController.swift in Sources */,
+				EE259E4B1DB89275007C1AAE /* TestAnnotationView.swift in Sources */,
 				EE7B9DEF1DA207F100E4E100 /* fotoView.swift in Sources */,
 				EE1776E01D9CDCEC000CE436 /* codigoQRView.swift in Sources */,
 				EE1776DA1D9CDC65000CE436 /* mapaView.swift in Sources */,
+				EE9097381DB48361009571A4 /* ConfiguracionCelda.swift in Sources */,
 				EE1776E41D9CDDB8000CE436 /* Rutas.swift in Sources */,
 				EE1776C61D9CD39F000CE436 /* ProyectoFinal1.xcdatamodeld in Sources */,
 				EE1776E81D9CDF1F000CE436 /* coloresRutas.swift in Sources */,
+				EE9097361DB48359009571A4 /* Teatros.swift in Sources */,
 				EE1776D81D9CDC2C000CE436 /* TableView.swift in Sources */,
+				EE9097321DB482DE009571A4 /* AcercaView.swift in Sources */,
+				EE259E401DB890C7007C1AAE /* DebugMapViewController.swift in Sources */,
+				EE259E3A1DB89094007C1AAE /* ARAnnotationView.swift in Sources */,
+				EE259E3C1DB89094007C1AAE /* ARTrackingManager.swift in Sources */,
+				EE259E391DB89094007C1AAE /* ARAnnotation.swift in Sources */,
 				EE1776C01D9CD39F000CE436 /* ViewController.swift in Sources */,
 				EE1776E61D9CDDC3000CE436 /* Puntos.swift in Sources */,
+				EE259E3B1DB89094007C1AAE /* ARConfiguration.swift in Sources */,
 				EE1776E21D9CDD0B000CE436 /* muestraQRView.swift in Sources */,
+				EE259E491DB891C8007C1AAE /* realidadAumentadaView.swift in Sources */,
 				EE1776DC1D9CDC91000CE436 /* RutasView.swift in Sources */,
+				EE9097341DB48315009571A4 /* EventosTableView.swift in Sources */,
 				EE1776BE1D9CD39F000CE436 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,10 +640,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ProyectoFinal1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mx.univeronline.ProyectoFinal1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -532,10 +657,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ProyectoFinal1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mx.univeronline.ProyectoFinal1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -550,6 +681,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -566,6 +698,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -580,6 +713,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -594,6 +728,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -627,6 +762,7 @@
 				EECFFEC71DA887FB0027712D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EECFFECA1DA887FB0027712D /* Build configuration list for PBXNativeTarget "ProyectoFinal1Watch" */ = {
 			isa = XCConfigurationList;
@@ -635,6 +771,7 @@
 				EECFFEC51DA887FB0027712D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

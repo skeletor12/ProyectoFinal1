@@ -83,8 +83,15 @@ class mapaView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  
         manejador.startMonitoringSignificantLocationChanges()
     }
     
-    @IBAction func nombrePunto(sender: AnyObject) {
-        
+    
+ 
+
+
+
+
+    @IBAction func agregar() {
+
+    
         puntoDatos.nombrePunto = String(self.nombrePunto.text!)
         
         var punto = CLLocationCoordinate2D()
@@ -109,6 +116,7 @@ class mapaView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  
             
             for seccionEntidad2 in seccionesEntidad! {
                 
+                let descripcionRuta = seccionEntidad2.valueForKey("descripcion") as! String
                 let nombreRuta = seccionEntidad2.valueForKey("nombre") as! String
                 let ultimoCodigo = seccionEntidad2.valueForKey("codigo") as! Int
                 /*if ultimoCodigo != 0 {
@@ -119,6 +127,7 @@ class mapaView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  
                 
                 puntoDatos.codigo = ultimoCodigo
                 envioRuta.nombre = nombreRuta
+                envioRuta.descripcion = descripcionRuta
                
                
             }
@@ -192,9 +201,31 @@ class mapaView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  
             print(envioRuta.nombre)
             let controller = segue.destinationViewController as! RutasView
             controller.textoi = envioRuta.nombre
+            controller.textod = envioRuta.descripcion
             controller.selector = 2
         }
         
     }
     
+    
+    @IBAction func compartir() {
+        var datos: String = ""
+        
+        for punto in punteria {
+            let nombre = "" + punto.nombre
+            let descripcion = punto.descripcion
+            
+            
+            datos += "Esta es mi nueva ruta: \(nombre)\n"
+            datos += "\(descripcion)\n"
+        }
+        let textoFijo = "Saludos desde mi app!"
+        if let miSitio = NSURL(string:"http://www.univeronline.com.mx"){
+            let objetosParaCompartir = [textoFijo,datos,miSitio]
+            let actividadRD = UIActivityViewController(activityItems: objetosParaCompartir, applicationActivities: nil)
+            self.presentViewController(actividadRD, animated: true, completion: nil)
+            
+        }
+        
+    }
 }

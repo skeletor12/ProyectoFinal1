@@ -14,6 +14,10 @@ var arrseleccion : [Puntos] = []
 
 class TableView: UITableViewController, NSFetchedResultsControllerDelegate  {
     
+    
+    @IBOutlet weak var indiceRuta: UILabel!
+    @IBOutlet weak var desRuta: UILabel!
+    
     var managedObjectContext: NSManagedObjectContext? = nil
     var contexto : NSManagedObjectContext? = nil
     var ultimoCodigo : Int = 0
@@ -31,8 +35,10 @@ class TableView: UITableViewController, NSFetchedResultsControllerDelegate  {
     for seccionEntidad2 in seccionesEntidad! {
         
         let isbnreq = seccionEntidad2.valueForKey("nombre") as! String
+        let descripcion = seccionEntidad2.valueForKey("descripcion") as! String
         let tituloreq = seccionEntidad2.valueForKey("codigo") as! Int
         punto.codigo = tituloreq
+        punto.descripcion = descripcion
         punto.nombre = isbnreq
         punteria.append(punto)
         //let nombreRuta = seccionEntidad2.valueForKey("nombre") as! String
@@ -54,7 +60,10 @@ class TableView: UITableViewController, NSFetchedResultsControllerDelegate  {
     }
     
     @IBOutlet weak var ruta: UITextField!
-    @IBAction func ruta(sender: AnyObject) {
+    @IBOutlet weak var descripcion: UITextField!
+    
+    
+    @IBAction func guardar() {
         busqueda()
         
         if punto.codigo == 0 {
@@ -63,26 +72,33 @@ class TableView: UITableViewController, NSFetchedResultsControllerDelegate  {
             punto.codigo = punto.codigo +  1
         }
         
-    let nuevaSeccionEntidad = NSEntityDescription.insertNewObjectForEntityForName("Rutas", inManagedObjectContext: self.contexto!)
-    
+        let nuevaSeccionEntidad = NSEntityDescription.insertNewObjectForEntityForName("Rutas", inManagedObjectContext: self.contexto!)
+        
         do {
-        let Ruta=String(self.ruta.text!)
-        nuevaSeccionEntidad.setValue(Ruta, forKey: "nombre")
-        nuevaSeccionEntidad.setValue(punto.codigo, forKey: "codigo")
-        try self.contexto?.save()
+            let Ruta=String(self.ruta.text!)
+            let Descripcion=String(self.descripcion.text!)
+            nuevaSeccionEntidad.setValue(Ruta, forKey: "nombre")
+            nuevaSeccionEntidad.setValue(Descripcion, forKey: "descripcion")
+            nuevaSeccionEntidad.setValue(punto.codigo, forKey: "codigo")
+            try self.contexto?.save()
             
-            }
-    
-    catch _ {
-    
-    }
-    
-
+        }
+            
+        catch _ {
+            
+        }
+        
     }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*if !UIImagePickerController.isSourceTypeAvailable(.Camera){
+            camaraboton.hidden = true
+        }
+        miPicker.delegate = self*/
+
         punteria.removeAll()
         self.title = "RUTAS PREVIAS"
         
@@ -199,6 +215,8 @@ class TableView: UITableViewController, NSFetchedResultsControllerDelegate  {
         let sectionInfo = self.fetchedResultsController.sections![section]
         return sectionInfo.numberOfObjects
     }
+    
+   
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Celda", forIndexPath: indexPath)
@@ -350,7 +368,15 @@ class TableView: UITableViewController, NSFetchedResultsControllerDelegate  {
         }
         
         
-}
+    }
+    
+    
+
+    
+   
+    
+    
+    
 }
 
     

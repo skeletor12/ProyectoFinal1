@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G1004" minimumToolsVersion="Automatic">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16A323" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="Puntos" syncable="YES">
-        <attribute name="codigo" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="latitud" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="longitud" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="codigo" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="latitud" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="longitud" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="nombrepunto" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="pertenece" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rutas" inverseName="tiene" inverseEntity="Rutas" syncable="YES"/>
     </entity>
     <entity name="Rutas" syncable="YES">
-        <attribute name="codigo" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="codigo" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="tiene" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Puntos" inverseName="pertenece" inverseEntity="Puntos" syncable="YES"/>
     </entity>
@@ -16,6 +17,6 @@
     <fetchRequest name="busqueda" entity="Rutas"/>
     <elements>
         <element name="Puntos" positionX="-63" positionY="-18" width="128" height="120"/>
-        <element name="Rutas" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="Rutas" positionX="-54" positionY="-9" width="128" height="105"/>
     </elements>
 </model>

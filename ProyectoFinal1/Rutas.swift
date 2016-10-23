@@ -13,12 +13,14 @@ class Rutas{
     
     var codigo : Int
     var nombre : String
+    var descripcion : String
    
     
     
     init(){
         self.codigo = 0
         self.nombre = ""
+        self.descripcion = ""
     }
     
 }

@@ -28,11 +28,11 @@ class InterfaceController: WKInterfaceController {
         super.willActivate()
      
         
-        table.setNumberOfRows(3, withRowType: "LabelRow")
-        for (var i = 0; i<table.numberOfRows; i++){
+        /*table.setNumberOfRows(3, withRowType: "LabelRow")
+        for (i,, in 0 ..< table.numberOfRows){
          let row = table.rowControllerAtIndex(i) as? LabelRow
         row!.label.setText("Ruta \(i+1)")
-        }
+        }*/
     }
     
         

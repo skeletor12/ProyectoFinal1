@@ -1,8 +1,8 @@
 //
 //  realidadAumentadaView.swift
-//  ProyectoFinalC
+//  ProyectoFinal1
 //
-//  Created by Luis Rodriguez on 28/08/16.
+//  Created by Luis Rodriguez on 20/10/16.
 //  Copyright © 2016 Luis Rodriguez. All rights reserved.
 //
 
@@ -16,7 +16,7 @@ class realidadAumentadaView: UIViewController, ARDataSource, CLLocationManagerDe
     var codigoRuta : Int = 0
     var codigoRutaRea : Int = 0
     var contador = 0
-
+    
     
     var contexto : NSManagedObjectContext? = nil
     var contexto2 : NSManagedObjectContext? = nil
@@ -32,7 +32,7 @@ class realidadAumentadaView: UIViewController, ARDataSource, CLLocationManagerDe
     
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////Revisar el envio del valor textoi para poder seleccionar bien los puntos
     override func viewDidLoad() {
-       
+        
         iniciaRAG()
         super.viewDidLoad()
         manejador.delegate = self
@@ -82,28 +82,28 @@ class realidadAumentadaView: UIViewController, ARDataSource, CLLocationManagerDe
         let seleccion = Puntos ()
         
         /*self.contexto2 = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-        
-        
-        let seccionEntidad4 = NSEntityDescription.entityForName("Rutas", inManagedObjectContext: self.contexto2!)
-        
-        let peticion2 = seccionEntidad4?.managedObjectModel.fetchRequestTemplateForName("busqueda")
-        do{
-            let  seccionesEntidad4 = try self.contexto2?.executeFetchRequest(peticion2!)
-            
-            for seccionEntidad4 in seccionesEntidad4! {
-                
-                //let isbnreq = seccionEntidad4.valueForKey("nombre") as! String
-                let tituloreq = seccionEntidad4.valueForKey("codigo") as! Int
-                
-                if tituloreq == codigoRutaRea {
-                    codigoRuta = tituloreq
-                    print(codigoRuta)
-                }
-            }
-        }
-        catch _ {
-            
-        }*/
+         
+         
+         let seccionEntidad4 = NSEntityDescription.entityForName("Rutas", inManagedObjectContext: self.contexto2!)
+         
+         let peticion2 = seccionEntidad4?.managedObjectModel.fetchRequestTemplateForName("busqueda")
+         do{
+         let  seccionesEntidad4 = try self.contexto2?.executeFetchRequest(peticion2!)
+         
+         for seccionEntidad4 in seccionesEntidad4! {
+         
+         //let isbnreq = seccionEntidad4.valueForKey("nombre") as! String
+         let tituloreq = seccionEntidad4.valueForKey("codigo") as! Int
+         
+         if tituloreq == codigoRutaRea {
+         codigoRuta = tituloreq
+         print(codigoRuta)
+         }
+         }
+         }
+         catch _ {
+         
+         }*/
         
         self.contexto = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         
@@ -123,22 +123,22 @@ class realidadAumentadaView: UIViewController, ARDataSource, CLLocationManagerDe
                 let longitude = seccionEntidad2.valueForKey("longitud") as! Double
                 
                 if codigo == codigoRutaRea {
-                
-                contador = contador + 1
-                seleccion.nombrePunto = nombrepunto
-                seleccion.codigo = codigo
-                seleccion.latitud = latitude
-                seleccion.longitud = longitude
-     
-            let anotacion = ARAnnotation()
-            anotacion.location = self.obtenerPosiciones(latitud:seleccion.latitud,longitud:seleccion.longitud)
-            anotacion.title = seleccion.nombrePunto
-            anotaciones.append(anotacion)
+                    
+                    contador = contador + 1
+                    seleccion.nombrePunto = nombrepunto
+                    seleccion.codigo = codigo
+                    seleccion.latitud = latitude
+                    seleccion.longitud = longitude
+                    
+                    let anotacion = ARAnnotation()
+                    anotacion.location = self.obtenerPosiciones(latitud:seleccion.latitud,longitud:seleccion.longitud)
+                    anotacion.title = seleccion.nombrePunto
+                    anotaciones.append(anotacion)
                 }
-        }
+            }
             
         }
-        
+            
         catch _ {
             
         }
@@ -150,7 +150,7 @@ class realidadAumentadaView: UIViewController, ARDataSource, CLLocationManagerDe
     {
         let lat = latitud
         let lon = longitud
-     
+        
         return CLLocation(latitude: lat, longitude: lon)
     }
     

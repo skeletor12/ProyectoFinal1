@@ -12,13 +12,18 @@ import MapKit
 import CoreData
 
 
-var arrseleccion2 : [Puntos] = []
 
-class RutasView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
+
+class RutasView: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
+    
+ var arrseleccion2 : [Puntos] = []
+
     @IBOutlet weak var texto: UILabel!
+    @IBOutlet weak var descripcion: UILabel!
     var texto2 = ""
     var textoi = ""
+    var textod = ""
     var selector = 0
     var eleccion = 0
     let color = Colores()
@@ -35,6 +40,7 @@ class RutasView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate 
         if let detail = self.detailItem {
             if self.texto != nil {
                 texto.text = detail.valueForKey("nombre")!.description
+                descripcion.text = detail.valueForKey("descripcion")!.description
                 let texto2 = detail.valueForKey("nombre")!.description
                 
                 return texto2
@@ -54,12 +60,13 @@ class RutasView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate 
     
     
     override func viewWillAppear(animated: Bool) {
-        arrseleccion.removeAll()
-        arrseleccion2.removeAll()
+        //arrseleccion.removeAll()
+        //arrseleccion2.removeAll()
         codigoRuta=Int(codigoRuta)
          eleccion = Int(selector)
         if eleccion == 2 {
-        texto.text=String(textoi) }
+        texto.text=String(textoi)
+        descripcion.text=String(textod)}
         texto2=String(textoi)
         print(codigoRuta)
     }
@@ -67,10 +74,13 @@ class RutasView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate 
     var contexto : NSManagedObjectContext? = nil
     var contexto2 : NSManagedObjectContext? = nil
 
+
     @IBOutlet weak var mapa: MKMapView!
     
     
     @IBOutlet weak var botones: UISegmentedControl!
+    
+    
     @IBAction func botones(sender: AnyObject) {
         if(botones.selectedSegmentIndex==0){
             mapa.mapType = MKMapType.Standard }
@@ -96,9 +106,10 @@ class RutasView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate 
     }
 
     let manejador = CLLocationManager()
-    
-    
+  
     override func viewDidLoad() {
+        arrseleccion.removeAll()
+        arrseleccion2.removeAll()
         mapa.delegate = self
         super.viewDidLoad()
         self.configureView()
@@ -128,7 +139,11 @@ class RutasView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate 
             
         }*/
         
-        let puntoCoor = CLLocationCoordinate2D(latitude: (manejador.location?.coordinate.latitude)!, longitude: (manejador.location?.coordinate.longitude)!)
+        var puntoCoor = CLLocationCoordinate2D()
+        puntoCoor.latitude = (manejador.location?.coordinate.latitude)!
+        puntoCoor.longitude = (manejador.location?.coordinate.longitude)!
+        
+        //let puntoCoor = CLLocationCoordinate2D(latitude: (manejador.location?.coordinate.latitude)!, longitude: (manejador.location?.coordinate.longitude)!)
         let puntoLugar = MKPlacemark(coordinate: puntoCoor, addressDictionary: nil)
         origen = MKMapItem(placemark: puntoLugar)
         origen.name = "Posicion Actual"
@@ -270,7 +285,38 @@ class RutasView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate 
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print(codigoRuta) }
+        print(codigoRuta)
+        
+        if segue.identifier == "Realidad" {
+            let controller = segue.destinationViewController as! realidadAumentadaView
+            controller.codigoRutaRea = codigoRuta
+        }
+    }
+    
+
+    @IBAction func compartir() {
+        var datos: String = ""
+        var i = 0
+        
+        for punto in arrseleccion {
+            let nombre = "" + punto.nombrePunto
+            let latitud = punto.latitud
+            let longitud = punto.longitud
+            
+            
+            datos += "\(nombre)\n"
+            datos += "\(latitud), \(longitud)\n\n"
+            
+            i += 1
+        }
+        let textoFijo = "Saludos desde mi app!"
+        if let miSitio = NSURL(string:"http://www.univeronline.com.mx"){
+            let objetosParaCompartir = [textoFijo,datos,miSitio]
+            let actividadRD = UIActivityViewController(activityItems: objetosParaCompartir, applicationActivities: nil)
+            self.presentViewController(actividadRD, animated: true, completion: nil)
+            
+        }
+    }
     
     
     
